@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart App Test Regression Suite" thread-count="4" parallel="tests" verbose="4">
+
+	<listeners>
+		<listener class-name="com.qa.pfl.listeners.ExtentReportListener" />
+
+		<listener class-name="com.qa.pfl.listeners.TestAllureListener" />
+
+
+	</listeners>
+	 
+
+	<test name="Customer Order">
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+			<class name="com.qa.pfl.tests.LoginPageTest" />
+		</classes>
+	</test>
+	<!--test name="Add Quote to Transaction ">
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+			<class name="com.qa.pfl.tests.CPQ_CustomerOrder" />
+		</classes>
+	</test-->
+
+</suite>	
